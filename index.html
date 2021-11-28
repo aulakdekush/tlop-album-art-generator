@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link href='tlop.css' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>TLOP ART GENERATOR</h1>
+        <svg viewBox="0 0 2000 2000" id="svg">
+            <style>
+                svg {
+                    background: #F58B57;
+                }
+                
+                .primaryText, .secondaryText, .tertiaryText {
+                    font-family: 'HelveticaBold';
+                }
+
+                .primaryText, .secondaryText {
+                    font-size: 128px;
+                }
+
+                .secondaryText {
+                    letter-spacing: 2px;
+                }
+
+                .tertiaryText {
+                    font-size: 51.5px;
+                    letter-spacing: 0.5px;
+                }
+            </style>
+            <text x="293" y="188" class="primaryText"></text>
+            <text x="293" y="341" class="primaryText"></text>
+            <text x="293" y="494" class="primaryText"></text>
+            <text x="293" y="647" class="primaryText"></text>
+            <text x="293" y="800" class="primaryText"></text>
+            <text x="293" y="953" class="primaryText"></text>
+            <text x="293" y="1263" class="primaryText"></text>
+
+            <text x="1359" y="188" class="secondaryText"></text>
+            <text x="1218" y="341" class="secondaryText"></text>
+            <text x="1218" y="494" class="secondaryText"></text>
+            <text x="1218" y="647" class="secondaryText"></text>
+            <text x="1218" y="800" class="secondaryText"></text>
+            <text x="1218" y="953" class="secondaryText"></text>
+            <text x="1288" y="1263" class="secondaryText"></text>
+
+            <text x="245.5" y="1328" class="tertiaryText"></text>
+            <text x="245.5" y="1391" class="tertiaryText"></text>
+            <text x="245.5" y="1455" class="tertiaryText"></text>
+            <text x="245.5" y="1518" class="tertiaryText"></text>
+            <text x="245.5" y="1581" class="tertiaryText"></text>
+            <text x="245.5" y="1644" class="tertiaryText"></text>
+            <text x="245.5" y="1707" class="tertiaryText"></text>
+            <text x="245.5" y="1770" class="tertiaryText"></text>
+            <text x="245.5" y="1833" class="tertiaryText"></text>
+            <text x="245.5" y="1896" class="tertiaryText"></text>
+
+            <text x="1338" y="1328" class="tertiaryText"></text>
+            <text x="1338" y="1391" class="tertiaryText"></text>
+            <text x="1338" y="1455" class="tertiaryText"></text>
+            <text x="1338" y="1518" class="tertiaryText"></text>
+            <text x="1338" y="1581" class="tertiaryText"></text>
+            <text x="1338" y="1644" class="tertiaryText"></text>
+            <text x="1338" y="1707" class="tertiaryText"></text>
+            <text x="1338" y="1770" class="tertiaryText"></text>
+            <text x="1338" y="1833" class="tertiaryText"></text>
+            <text x="1338" y="1896" class="tertiaryText"></text>
+
+            <image id="image1" class="image" midpoint="808.5" x="411" y="602" height="554"></image>
+            <image id="image2" class="image" midpoint="1157.5" x="884" y="1392" height="469"></image>
+        </svg>
+        <div class="inputs">
+            <span id="saveButton">💾 Save</span><br>
+            <input value="THE LIFE OF" id="primaryInput" class="textInput" autocomplete="off"><br>
+            <input value="PABLO" id="secondaryInput" class="textInput" autocomplete="off"><br>
+            <input value="WHICH / ONE" id="tertiaryInput" class="textInput" autocomplete="off"><br>
+            <input id="firstImage" name="firstImage" type="file" accept="image/*">
+            <label for="firstImage" class="fileInput">TOP IMAGE</label>
+            <p>Recommended resolution: 795 x 554</p><br>
+            <input id="secondImage" name="secondImage" type="file" accept="image/*">
+            <label for="secondImage" class="fileInput">BOTTOM IMAGE</label>
+            <p>Recommended resolution: 547 x 469</p><br>
+            <input type="color" id="backgroundColor" name="backgroundColor" value="#F58B57">
+            <label for="backgroundColor" class="colorInput">Background colour: #F58B57</label><br>
+            <input type="color" id="textColor" name="textColor" value="#000000">
+            <label for="textColor" class="colorInput">Text colour: #000000</label><br>
+        </div>
+    </body>
+</html>
+
+<script src="tlop.js"></script> 

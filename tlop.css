@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'HelveticaBold';
+    src: url('Helvetica-Bold.ttf');
+}
+
+body {
+    background-color: #f58b57;
+    font-family: 'HelveticaBold';
+    text-align: center;
+}
+
+#svg {
+    max-height: 60vh;
+    max-width: 80%;
+    aspect-ratio: 1;
+    border: solid 5px black;
+    margin: 20px 10%;
+    background-size: 100%;
+}
+
+h1 {
+    color: black;
+    font-size: min(12vw, 56px);
+    text-align: center;
+    margin: 0px 10%;
+}
+
+.inputs {
+    text-align: center;
+}
+
+.primaryText, .secondaryText {
+    font-size: 128px;
+}
+
+.secondaryText {
+    letter-spacing: 2px;
+}
+
+.tertiaryText {
+    font-size: 51.5px;
+    letter-spacing: 0.55px;
+}
+
+.textInput, .fileInput, .colorInput, #saveButton {
+    background: rgba(127, 127, 127, 0.1);
+    border: none;
+    border-bottom: solid 3px rgba(0, 0, 0, 0.35);
+    font-family: HelveticaBold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: block;
+    padding: 1px 2px;
+}
+
+.fileInput, .colorInput, #saveButton {
+    cursor: pointer;
+}
+
+.fileInput {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+
+p {
+    margin: 0px;
+}
+
+input[type="file"], input[type="color"] {
+    display: none;
+}
+
+.inputs {
+    margin: 0px 10%;
+}
