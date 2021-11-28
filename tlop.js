@@ -81,6 +81,30 @@ document.getElementById("rightAlign").addEventListener("click", event => {
     })
 })
 
+document.addEventListener("dragover", function(event) {
+    event.preventDefault();
+});
+
+document.addEventListener("drop", function(event) {
+    event.preventDefault();
+});
+
+document.getElementById("image1").addEventListener("drop", event => {
+    event.preventDefault();
+    if (event.dataTransfer.files[0].type.startsWith("image/")) {
+        document.querySelector("label[for='firstImage']").textContent = event.dataTransfer.files[0].name;
+        updateImage(event.dataTransfer.files[0], document.getElementById("image1"));
+    }
+})
+
+document.getElementById("image2").addEventListener("drop", event => {
+    event.preventDefault();
+    if (event.dataTransfer.files[0].type.startsWith("image/")) {
+        document.querySelector("label[for='secondImage']").textContent = event.dataTransfer.files[0].name;
+        updateImage(event.dataTransfer.files[0], document.getElementById("image2"));
+    }
+})
+
 document.querySelectorAll("input").forEach(element => {
     element.addEventListener("keyup", () => {
         updateText();
