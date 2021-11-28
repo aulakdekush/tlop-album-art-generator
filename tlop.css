@@ -117,6 +117,6 @@ input[type="file"], input[type="color"] {
 }
 
 #leftAlign {
-    background-color: rgba(127, 127, 127, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     background-image: url("./resources/left.svg");
 }
