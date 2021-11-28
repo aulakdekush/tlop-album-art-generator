@@ -54,11 +54,13 @@ h1 {
     max-width: 800px;
     margin: auto;
     display: block;
-    padding: 1px 2px;
+    padding: 1px 0px;
+    min-height: 38px;
+    line-height: 38px;
 }
 
-#saveButton {
-    padding: 1px 0px;
+.textInput {
+    min-height: 43px;
 }
 
 .fileInput, .colorInput, #saveButton {
@@ -99,7 +101,6 @@ input[type="file"], input[type="color"] {
 }
 
 .inputs > div {
-    
     width: 100%;
     max-width: 800px;
     margin: auto;
