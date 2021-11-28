@@ -1,6 +1,6 @@
 window.onload = () => {
-    fetch("./tlop1.jpg").then(response => response.blob()).then(blob => updateImage(blob, document.getElementById("image1")));
-    fetch("./tlop2.jpg").then(response => response.blob()).then(blob => updateImage(blob, document.getElementById("image2")));
+    fetch("./resources/tlop1.jpg").then(response => response.blob()).then(blob => updateImage(blob, document.getElementById("image1")));
+    fetch("./resources/tlop2.jpg").then(response => response.blob()).then(blob => updateImage(blob, document.getElementById("image2")));
     updateText();
 }
 
@@ -34,7 +34,7 @@ async function save() {
     svg.setAttribute("width", 2000);
     svg.setAttribute("height", 2000);
     const reader = new FileReader();
-    await fetch("./Helvetica-Bold.ttf").then(response => response.blob()).then(blob => {
+    await fetch("./resources/Helvetica-Bold.ttf").then(response => response.blob()).then(blob => {
         reader.onload = () => {
             let fontFace = `
             @font-face {
@@ -62,6 +62,24 @@ async function save() {
 }
 
 document.getElementById("saveButton").addEventListener("click", () => save());
+
+document.getElementById("leftAlign").addEventListener("click", event => {
+    event.target.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+    document.getElementById("rightAlign").style.backgroundColor = "rgba(127, 127, 127, 0.1)";
+    document.querySelectorAll(".primaryText").forEach(item => {
+        item.classList.remove("alignRight");
+        item.setAttribute("x", 292)
+    })
+})
+
+document.getElementById("rightAlign").addEventListener("click", event => {
+    event.target.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+    document.getElementById("leftAlign").style.backgroundColor = "rgba(127, 127, 127, 0.1)";
+    document.querySelectorAll(".primaryText").forEach(item => {
+        item.classList.add("alignRight");
+        item.setAttribute("x", 1074)
+    })
+})
 
 document.querySelectorAll("input").forEach(element => {
     element.addEventListener("keyup", () => {

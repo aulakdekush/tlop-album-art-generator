@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'HelveticaBold';
-    src: url('Helvetica-Bold.ttf');
+    src: url('./resources/Helvetica-Bold.ttf');
 }
 
 body {
@@ -57,6 +57,10 @@ h1 {
     padding: 1px 2px;
 }
 
+#saveButton {
+    padding: 1px 0px;
+}
+
 .fileInput, .colorInput, #saveButton {
     cursor: pointer;
 }
@@ -77,4 +81,42 @@ input[type="file"], input[type="color"] {
 
 .inputs {
     margin: 0px 10%;
+}
+
+#leftAlign, #rightAlign {
+    background: rgba(127, 127, 127, 0.1);
+    border: none;
+    border-bottom: solid 3px rgba(0, 0, 0, 0.35);
+    font-family: HelveticaBold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: block;
+    padding: 1px 2px;
+}
+
+.inputs > div {
+    
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+#leftAlign, #rightAlign {
+    background-image: url("./resources/right.svg");
+    height: 38px;
+    width: 38px;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px 32px;
+    cursor: pointer;
+}
+
+#leftAlign {
+    background-color: rgba(127, 127, 127, 0.1);
+    background-image: url("./resources/left.svg");
 }
