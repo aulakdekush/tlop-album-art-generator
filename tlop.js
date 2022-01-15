@@ -14,6 +14,14 @@ function updateText() {
     document.querySelectorAll(".tertiaryText").forEach(element => {
         element.textContent = document.getElementById("tertiaryInput").value.toUpperCase();
     });
+    document.querySelectorAll(".quaternaryText").forEach(element => {
+        if (document.getElementById("quaternaryInput").disabled) {
+            element.textContent = document.getElementById("tertiaryInput").value.toUpperCase();
+            document.getElementById("quaternaryInput").value = element.textContent
+        } else {
+            element.textContent = document.getElementById("quaternaryInput").value.toUpperCase();
+        }
+    });
 }
 
 function updateImage(file, element) {
@@ -70,7 +78,7 @@ document.getElementById("leftAlign").addEventListener("click", event => {
         item.classList.remove("alignRight");
         item.setAttribute("x", 292)
     })
-})
+});
 
 document.getElementById("rightAlign").addEventListener("click", event => {
     event.target.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
@@ -79,6 +87,17 @@ document.getElementById("rightAlign").addEventListener("click", event => {
         item.classList.add("alignRight");
         item.setAttribute("x", 1074)
     })
+});
+
+document.getElementById("quaternaryCheckbox").addEventListener("click", event => {
+    if (event.target.classList.contains("enabled")) {
+        event.target.classList.remove("enabled");
+        document.getElementById("quaternaryInput").disabled = true;
+        updateText();
+    } else {
+        event.target.classList.add("enabled");
+        document.getElementById("quaternaryInput").disabled = false;
+    }
 })
 
 document.addEventListener("dragover", function(event) {

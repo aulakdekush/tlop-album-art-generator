@@ -37,7 +37,7 @@ h1 {
     letter-spacing: 2px;
 }
 
-.tertiaryText {
+.tertiaryText, .quaternaryText {
     font-size: 51.5px;
     letter-spacing: 0.55px;
 }
@@ -85,7 +85,7 @@ input[type="file"], input[type="color"] {
     margin: 0px 10%;
 }
 
-#leftAlign, #rightAlign {
+#leftAlign, #rightAlign, #quaternaryCheckbox {
     background: rgba(127, 127, 127, 0.1);
     border: none;
     border-bottom: solid 3px rgba(0, 0, 0, 0.35);
@@ -98,16 +98,6 @@ input[type="file"], input[type="color"] {
     margin: auto;
     display: block;
     padding: 1px 2px;
-}
-
-.inputs > div {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-}
-
-#leftAlign, #rightAlign {
-    background-image: url("./resources/right.svg");
     height: 38px;
     width: 38px;
     flex-shrink: 0;
@@ -117,7 +107,25 @@ input[type="file"], input[type="color"] {
     cursor: pointer;
 }
 
+.inputs > div {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+#rightAlign {
+    background-image: url("./resources/right.svg");
+}
+
 #leftAlign {
     background-color: rgba(0, 0, 0, 0.3);
     background-image: url("./resources/left.svg");
+}
+
+#quaternaryCheckbox {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#quaternaryCheckbox.enabled {
+    background-image: url("./resources/tick.svg");
 }
